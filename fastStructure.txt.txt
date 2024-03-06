@@ -1,0 +1,82 @@
+###FASTSTRUCTURE
+
+####Dataset A (no R filter, min-maf =0)
+###convert vcf to bed file
+plink --vcf DatasetA.vcf --make-bed --out DatasetA --allow-extra-chr
+###Run FASTSTRUCTURE
+python2.7 ./structure.py -K 1 --input=DatasetA --output=fast_DatasetA
+python2.7 ./structure.py -K 2 --input=DatasetA --output=fast_DatasetA
+python2.7 ./structure.py -K 3 --input=DatasetA --output=fast_DatasetA
+python2.7 ./structure.py -K 4 --input=DatasetA --output=fast_DatasetA
+python2.7 ./structure.py -K 5 --input=DatasetA --output=fast_DatasetA
+python2.7 ./structure.py -K 6 --input=DatasetA --output=fast_DatasetA
+python2.7 ./structure.py -K 7 --input=DatasetA --output=fast_DatasetA
+python2.7 ./structure.py -K 8 --input=DatasetA --output=fast_DatasetA
+python2.7 ./structure.py -K 9 --input=DatasetA --output=fast_DatasetA
+python2.7 ./structure.py -K 10 --input=DatasetA --output=fast_DatasetA
+python2.7 ./structure.py -K 11 --input=DatasetA --output=fast_DatasetA
+###calculate optimum K### 
+python2.7 ./chooseK.py --input=fast_DatasetA
+
+
+###Dataset B (no R filter, min-maf =0.05)
+###convert vcf to bed file
+plink --vcf DatasetB.vcf --make-bed --out DatasetB --allow-extra-chr
+###Run FASTSTRUCTURE
+python2.7 ./structure.py -K 1 --input=DatasetB --output=fast_DatasetB
+python2.7 ./structure.py -K 2 --input=DatasetB --output=fast_DatasetB
+python2.7 ./structure.py -K 3 --input=DatasetB --output=fast_DatasetB
+python2.7 ./structure.py -K 4 --input=DatasetB --output=fast_DatasetB
+python2.7 ./structure.py -K 5 --input=DatasetB --output=fast_DatasetB
+python2.7 ./structure.py -K 6 --input=DatasetB --output=fast_DatasetB
+python2.7 ./structure.py -K 7 --input=DatasetB --output=fast_DatasetB
+python2.7 ./structure.py -K 8 --input=DatasetB --output=fast_DatasetB
+python2.7 ./structure.py -K 9 --input=DatasetB --output=fast_DatasetB
+python2.7 ./structure.py -K 10 --input=DatasetB --output=fast_DatasetB
+python2.7 ./structure.py -K 11 --input=DatasetB --output=fast_DatasetB
+###calculate optimum K### 
+python2.7 ./chooseK.py --input=fast_DatasetB
+
+
+
+
+###Dataset C (R=0.9, no min-maf filter)
+
+###convert vcf to bed file
+plink --vcf DatasetC.vcf --make-bed --out DatasetC --allow-extra-chr
+###Run FASTSTRUCTURE
+python2.7 ./structure.py -K 1 --input=DatasetC --output=fast_DatasetC
+python2.7 ./structure.py -K 2 --input=DatasetC --output=fast_DatasetC
+python2.7 ./structure.py -K 3 --input=DatasetC --output=fast_DatasetC
+python2.7 ./structure.py -K 4 --input=DatasetC --output=fast_DatasetC
+python2.7 ./structure.py -K 5 --input=DatasetC --output=fast_DatasetC
+python2.7 ./structure.py -K 6 --input=DatasetC --output=fast_DatasetC
+python2.7 ./structure.py -K 7 --input=DatasetC --output=fast_DatasetC
+python2.7 ./structure.py -K 8 --input=DatasetC --output=fast_DatasetC
+python2.7 ./structure.py -K 9 --input=DatasetC --output=fast_DatasetC
+python2.7 ./structure.py -K 10 --input=DatasetC --output=fast_DatasetC
+python2.7 ./structure.py -K 11 --input=DatasetC --output=fast_DatasetC
+###calculate optimum K### 
+python2.7 ./chooseK.py --input=fast_DatasetC
+
+
+
+###Dataset D (R=0.9, min-maf =0.05)
+###convert vcf to bed file
+plink --vcf DatasetD.vcf --make-bed --out DatasetD --allow-extra-chr
+###Run FASTSTRUCTURE
+python2.7 ./structure.py -K 1 --input=DatasetD --output=fast_DatasetD
+python2.7 ./structure.py -K 2 --input=DatasetD --output=fast_DatasetD
+python2.7 ./structure.py -K 3 --input=DatasetD --output=fast_DatasetD
+python2.7 ./structure.py -K 4 --input=DatasetD --output=fast_DatasetD
+python2.7 ./structure.py -K 5 --input=DatasetD --output=fast_DatasetD
+python2.7 ./structure.py -K 6 --input=DatasetD --output=fast_DatasetD
+python2.7 ./structure.py -K 7 --input=DatasetD --output=fast_DatasetD
+python2.7 ./structure.py -K 8 --input=DatasetD --output=fast_DatasetD
+python2.7 ./structure.py -K 9 --input=DatasetD --output=fast_DatasetD
+python2.7 ./structure.py -K 10 --input=DatasetD --output=fast_DatasetD
+python2.7 ./structure.py -K 11 --input=DatasetD --output=fast_DatasetD
+###calculate optimum K### 
+python2.7 ./chooseK.py --input=fast_DatasetD
+
+
