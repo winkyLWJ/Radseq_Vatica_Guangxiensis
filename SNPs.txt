@@ -1,0 +1,20 @@
+###################STACKS SNP calling##################################################################
+#####Run denovo_map.pl##
+denovo_map.pl -M 5 -m 20 -T 8 -o './DatasetA'  --popmap './popmap'  --samples './Trim'  --paired --structure --genepop --vcf --write-single-snp
+
+populations -P 'DatasetA' -M './popmap_NP.txt' -p 1 -R 0.9 -t 8  --structure --genepop --vcf --write-single-snp -O 'NP_R0.9_p1' 
+
+populations -P 'DatasetA' -M './popmap_NS.txt' -p 1 -R 0.9 -t 8  --structure --genepop --vcf --write-single-snp -O 'NS_R0.9_p1' 
+
+populatioMC -P 'DatasetA' -M './popmap_MC.txt' -p 1 -R 0.9 -t 8  --structure --genepop --vcf --write-single-snp -O 'MC_R0.9_p1'
+
+###################VCFTOOLS for quality filters###########################################################
+##DATASET with 0% missingness, loci with minimum allele frequency < 0.05 filtered (DatasetB)
+vcftools --vcf ./DatasetA.vcf --maf 0.05 --recode --out DatasetB
+
+##DATASET with 10% missingness (DatasetC)
+vcftools--vcf ./DatasetA.vcf --max-missing 0.9 --recode --out DatasetC
+
+##DATASET with 10% missingness, loci with minimum allele frequency < 0.05 filtered (DatasetD)
+vcftools--vcf ./DatasetA.vcf --maf 0.05 --max-missing 0.9 --recode --out DatasetD
+
