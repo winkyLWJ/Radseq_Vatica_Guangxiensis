@@ -44,9 +44,9 @@ DatasetC_3pop@Tajima.D
 NP <- readData("DIRECTORY/NP_R0.9_p1", format="VCF", SNP.DATA = TRUE)
 
 ##Asign individuals to population (Using T. tridentatus as example)###ad means adult, sa means sapling, se means seedlings
-pop.NP_ad <- c("VGNP34.clean")
-pop.NP_sa <- c("VGNP35.clean","VGNP105.clean")
-pop.NP_se <- c("VGNP100.clean","VGNP102.clean","VGNP103.clean","VGNP104.clean","VGNP106.clean","VGNP107.clean","VGNP108.clean","VGNP10_all.clean","VGNP110.clean","VGNP13.clean","VGNP14.clean","VGNP16.clean","VGNP17.clean","VGNP1.clean","VGNP20.clean","VGNP21_all.clean","VGNP22.clean","VGNP23.clean","VGNP24.clean","VGNP25.clean","VGNP26_all.clean","VGNP27.clean","VGNP28.clean","VGNP2.clean","VGNP31.clean","VGNP32.clean","VGNP36.clean","VGNP37.clean","VGNP38.clean","VGNP39.clean","VGNP3.clean","VGNP40.clean","VGNP41.clean","VGNP42.clean","VGNP44.clean","VGNP46.clean","VGNP48.clean","VGNP4.clean","VGNP50.clean","VGNP56.clean","VGNP59.clean","VGNP5.clean","VGNP63.clean","VGNP64.clean","VGNP65.clean","VGNP66.clean","VGNP69.clean","VGNP6.clean","VGNP70.clean","VGNP72.clean","VGNP73.clean","VGNP74.clean","VGNP75.clean","VGNP76.clean","VGNP77.clean","VGNP78.clean","VGNP79.clean","VGNP7.clean","VGNP80.clean","VGNP82.clean","VGNP83.clean","VGNP84.clean","VGNP85.clean","VGNP86.clean","VGNP87.clean","VGNP88.clean","VGNP89.clean","VGNP90.clean","VGNP91.clean","VGNP92.clean","VGNP93.clean","VGNP94.clean","VGNP96.clean","VGNP97.clean","VGNP98.clean","VGNP99.clean","VGNP9.clean")
+pop.NP_ad <- c("Adults_samplename")
+pop.NP_sa <- c("Saplings_samplename")
+pop.NP_se <- c("Seedlings_samplename")
 
 NP <- set.populations(NP,list(pop.NP_ad, pop.NP_sa, pop.NP_se))
 NP <- neutrality.stats(NP)
@@ -62,8 +62,8 @@ NP@Tajima.D
 NS <- readData("DIRECTORY/NS_R0.9_p1", format="VCF", SNS.DATA = TRUE)
 
 ##Asign individuals to population (Using T. tridentatus as example)###ad means adult, sa means sapling, se means seedlings
-pop.NS_ad <- c("VXRN135.clean","VXRN160.clean","VXRN161.clean","VXRN33.clean")
-pop.NS_se <- c("VXRN02.clean","VXRN03.clean","VXRN04.clean","VXRN100.clean","VXRN104.clean","VXRN106.clean","VXRN107.clean","VXRN113.clean","VXRN114.clean","VXRN116.clean","VXRN117.clean","VXRN119.clean","VXRN120.clean","VXRN121.clean","VXRN122.clean","VXRN126.clean","VXRN128.clean","VXRN12.clean","VXRN130.clean","VXRN131.clean","VXRN134.clean","VXRN136.clean","VXRN137.clean","VXRN138.clean","VXRN139.clean","VXRN141.clean","VXRN142.clean","VXRN143.clean","VXRN144.clean","VXRN145.clean","VXRN146.clean","VXRN147.clean","VXRN148.clean","VXRN149.clean","VXRN150.clean","VXRN152.clean","VXRN153.clean","VXRN154.clean","VXRN155.clean","VXRN159.clean","VXRN162.clean","VXRN163.clean","VXRN16.clean","VXRN24.clean","VXRN25.clean","VXRN28.clean","VXRN30.clean","VXRN34.clean","VXRN52.clean","VXRN57.clean","VXRN65.clean")
+pop.NS_ad <- c("Adults_samplename")
+pop.NS_se <- c("Seedlings_samplename")
 NS <- set.populations(NSH,list(pop.NS_ad, pop.NS_se))
 NS <- set.populations(NS,list(pop.NS_ad, pop.NS_sa, pop.NS_se))
 NS <- neutrality.stats(NS)
@@ -78,9 +78,9 @@ NS@Tajima.D
 ######################################Nucleotide diversity and Tajima's D of MC
 MC <- readData("DIRECTORY/MC_R0.9_p1", format="VCF", SNP.DATA = TRUE)
 ##Asign individuals to population (Using T. tridentatus as example)###mad means adult, msa means sapling, mse means seedlings
-pop.mad <- c("VXRM178.clean","VXRM179.clean","VXRM183.clean","VXRM199.clean","VXRM219.clean","VXRM230.clean","VXRM231.clean","VXRM232.clean","VXRM233.clean","VXRM235.clean","VXRM236.clean","VXRM237.clean","VXRM238.clean","VXRM239.clean","VXRM241.clean","VXRM242.clean","VXRM243.clean","VXRM244.clean","VXRM254.clean","VXRM256.clean","VXRM257.clean","VXRM259.clean")
-pop.msa <- c("VXRM165.clean","VXRM167.clean","VXRM168.clean","VXRM169.clean","VXRM170.clean","VXRM171.clean","VXRM175.clean","VXRM180.clean","VXRM181.clean","VXRM185.clean","VXRM186.clean","VXRM193.clean","VXRM194.clean","VXRM198.clean","VXRM208.clean","VXRM210.clean","VXRM211.clean","VXRM212.clean","VXRM213.clean","VXRM214.clean","VXRM222.clean","VXRM229.clean","VXRM234.clean","VXRM240.clean","VXRM253.clean","VXRM258.clean","VXRM262.clean","VXRM32.clean")
-pop.mse <- c("VXRM166.clean","VXRM172.clean","VXRM173.clean","VXRM174.clean","VXRM176.clean","VXRM177.clean","VXRM182.clean","VXRM184.clean","VXRM188.clean","VXRM189.clean","VXRM190.clean","VXRM191.clean","VXRM192.clean","VXRM195.clean","VXRM197.clean","VXRM200.clean","VXRM201.clean","VXRM202.clean","VXRM203.clean","VXRM204.clean","VXRM205.clean","VXRM206.clean","VXRM209.clean","VXRM215.clean","VXRM216.clean","VXRM218.clean","VXRM220.clean","VXRM223.clean","VXRM224.clean","VXRM225.clean","VXRM227.clean","VXRM245.clean","VXRM247.clean","VXRM248.clean","VXRM249.clean","VXRM251.clean","VXRM252.clean","VXRM255.clean","VXRM264.clean","VXRM266.clean","VXRM267.clean","VXRM57.clean","VXRM62.clean","VXRM97.clean")
+pop.mad <- c("Adults_samplename")
+pop.msa <- c("Saplings_samplenamen")
+pop.mse <- c("Seedlings_samplename")
 
 MC <- set.populations(MC,list(pop.mad, pop.msa, pop.mse))
 MC <- neutrality.stats(MC)
