@@ -21,8 +21,8 @@ withAscertainment=0
 ascPop=0                          #-a command line option
 ascSize=2                         #-A command line option
 #-----------------------------
-useMonoSites="" 
-#useMonoSites="-0"                #-0 command line option
+#useMonoSites="" 
+useMonoSites="-0"                #-0 command line option
 #----------multiSF------------
 multiSFS=""
 #multiSFS="--multiSFS"            #--multiSFS command line option
