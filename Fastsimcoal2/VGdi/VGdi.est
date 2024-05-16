@@ -11,7 +11,7 @@
 0  MIG12       logunif  0.0001 0.5       output
 0  MIG34       logunif  0.0001 0.5       output
 0  MIG43       logunif  0.0001 0.5       output
-1  TDIV        unif     10   100000   output
+1  TDIV        unif     10   100000   output reference
 0  TPROP      unif     0.0001   0.5   output
 
 [RULES]
